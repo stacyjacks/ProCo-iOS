@@ -7,18 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5DADA4552C9C31E000536303 /* ProCo_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4542C9C31E000536303 /* ProCo_iOSApp.swift */; };
-		5DADA4572C9C31E000536303 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4562C9C31E000536303 /* ContentView.swift */; };
+		5DADA4552C9C31E000536303 /* ProCoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4542C9C31E000536303 /* ProCoApp.swift */; };
+		5DADA4572C9C31E000536303 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4562C9C31E000536303 /* DashboardView.swift */; };
 		5DADA4592C9C31E100536303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DADA4582C9C31E100536303 /* Assets.xcassets */; };
 		5DADA45C2C9C31E100536303 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DADA45B2C9C31E100536303 /* Preview Assets.xcassets */; };
+		5DADA4642C9C324100536303 /* GoalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4632C9C324100536303 /* GoalData.swift */; };
+		5DADA4662C9C35A000536303 /* AddDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4652C9C35A000536303 /* AddDataView.swift */; };
+		5DADA4682C9C35DE00536303 /* ScaffoldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4672C9C35DE00536303 /* ScaffoldView.swift */; };
+		5DADA46B2C9C362D00536303 /* PurpleGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA46A2C9C362D00536303 /* PurpleGradient.swift */; };
+		5DADA46D2C9C36C800536303 /* ProgressBarViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA46C2C9C36C800536303 /* ProgressBarViewStyle.swift */; };
+		5DADA46F2C9C36F700536303 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA46E2C9C36F700536303 /* Extensions.swift */; };
+		5DADA4712C9C371C00536303 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4702C9C371C00536303 /* ProgressBarView.swift */; };
+		5DADA4732C9C37F100536303 /* ProCoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4722C9C37F000536303 /* ProCoButton.swift */; };
+		5DADA4752C9C380B00536303 /* ProCoTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4742C9C380B00536303 /* ProCoTextButton.swift */; };
+		5DADA4772C9C382500536303 /* ProCoNavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4762C9C382500536303 /* ProCoNavButton.swift */; };
+		5DADA47A2C9C388300536303 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DADA4782C9C388300536303 /* Localizable.strings */; };
+		5DADA47C2C9C38CC00536303 /* ScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA47B2C9C38CC00536303 /* ScreenType.swift */; };
+		5DADA47E2C9C3BAD00536303 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA47D2C9C3BAD00536303 /* Input.swift */; };
+		5DADA4802C9C478C00536303 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA47F2C9C478C00536303 /* DateFormatter.swift */; };
+		5DADA4822C9C5F9100536303 /* Saved.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4812C9C5F9100536303 /* Saved.swift */; };
+		5DADA4842C9C638100536303 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4832C9C638100536303 /* SavedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5DADA4512C9C31E000536303 /* ProCo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ProCo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DADA4542C9C31E000536303 /* ProCo_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCo_iOSApp.swift; sourceTree = "<group>"; };
-		5DADA4562C9C31E000536303 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5DADA4542C9C31E000536303 /* ProCoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCoApp.swift; sourceTree = "<group>"; };
+		5DADA4562C9C31E000536303 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		5DADA4582C9C31E100536303 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DADA45B2C9C31E100536303 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5DADA4632C9C324100536303 /* GoalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalData.swift; sourceTree = "<group>"; };
+		5DADA4652C9C35A000536303 /* AddDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataView.swift; sourceTree = "<group>"; };
+		5DADA4672C9C35DE00536303 /* ScaffoldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaffoldView.swift; sourceTree = "<group>"; };
+		5DADA46A2C9C362D00536303 /* PurpleGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleGradient.swift; sourceTree = "<group>"; };
+		5DADA46C2C9C36C800536303 /* ProgressBarViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarViewStyle.swift; sourceTree = "<group>"; };
+		5DADA46E2C9C36F700536303 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5DADA4702C9C371C00536303 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		5DADA4722C9C37F000536303 /* ProCoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCoButton.swift; sourceTree = "<group>"; };
+		5DADA4742C9C380B00536303 /* ProCoTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCoTextButton.swift; sourceTree = "<group>"; };
+		5DADA4762C9C382500536303 /* ProCoNavButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCoNavButton.swift; sourceTree = "<group>"; };
+		5DADA4792C9C388300536303 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5DADA47B2C9C38CC00536303 /* ScreenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenType.swift; sourceTree = "<group>"; };
+		5DADA47D2C9C3BAD00536303 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		5DADA47F2C9C478C00536303 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		5DADA4812C9C5F9100536303 /* Saved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saved.swift; sourceTree = "<group>"; };
+		5DADA4832C9C638100536303 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +83,19 @@
 		5DADA4532C9C31E000536303 /* ProCo-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				5DADA4542C9C31E000536303 /* ProCo_iOSApp.swift */,
-				5DADA4562C9C31E000536303 /* ContentView.swift */,
+				5DADA4692C9C362300536303 /* components */,
+				5DADA4622C9C322900536303 /* model */,
+				5DADA4542C9C31E000536303 /* ProCoApp.swift */,
+				5DADA4562C9C31E000536303 /* DashboardView.swift */,
+				5DADA4782C9C388300536303 /* Localizable.strings */,
 				5DADA4582C9C31E100536303 /* Assets.xcassets */,
 				5DADA45A2C9C31E100536303 /* Preview Content */,
+				5DADA4652C9C35A000536303 /* AddDataView.swift */,
+				5DADA46E2C9C36F700536303 /* Extensions.swift */,
+				5DADA4702C9C371C00536303 /* ProgressBarView.swift */,
+				5DADA47B2C9C38CC00536303 /* ScreenType.swift */,
+				5DADA47F2C9C478C00536303 /* DateFormatter.swift */,
+				5DADA4832C9C638100536303 /* SavedView.swift */,
 			);
 			path = "ProCo-iOS";
 			sourceTree = "<group>";
@@ -65,6 +106,29 @@
 				5DADA45B2C9C31E100536303 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5DADA4622C9C322900536303 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5DADA4632C9C324100536303 /* GoalData.swift */,
+				5DADA47D2C9C3BAD00536303 /* Input.swift */,
+				5DADA4812C9C5F9100536303 /* Saved.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5DADA4692C9C362300536303 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				5DADA4672C9C35DE00536303 /* ScaffoldView.swift */,
+				5DADA46A2C9C362D00536303 /* PurpleGradient.swift */,
+				5DADA46C2C9C36C800536303 /* ProgressBarViewStyle.swift */,
+				5DADA4722C9C37F000536303 /* ProCoButton.swift */,
+				5DADA4742C9C380B00536303 /* ProCoTextButton.swift */,
+				5DADA4762C9C382500536303 /* ProCoNavButton.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DADA45C2C9C31E100536303 /* Preview Assets.xcassets in Resources */,
+				5DADA47A2C9C388300536303 /* Localizable.strings in Resources */,
 				5DADA4592C9C31E100536303 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,12 +202,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DADA4572C9C31E000536303 /* ContentView.swift in Sources */,
-				5DADA4552C9C31E000536303 /* ProCo_iOSApp.swift in Sources */,
+				5DADA47E2C9C3BAD00536303 /* Input.swift in Sources */,
+				5DADA47C2C9C38CC00536303 /* ScreenType.swift in Sources */,
+				5DADA4662C9C35A000536303 /* AddDataView.swift in Sources */,
+				5DADA4712C9C371C00536303 /* ProgressBarView.swift in Sources */,
+				5DADA4642C9C324100536303 /* GoalData.swift in Sources */,
+				5DADA4772C9C382500536303 /* ProCoNavButton.swift in Sources */,
+				5DADA4752C9C380B00536303 /* ProCoTextButton.swift in Sources */,
+				5DADA4682C9C35DE00536303 /* ScaffoldView.swift in Sources */,
+				5DADA46F2C9C36F700536303 /* Extensions.swift in Sources */,
+				5DADA4822C9C5F9100536303 /* Saved.swift in Sources */,
+				5DADA4842C9C638100536303 /* SavedView.swift in Sources */,
+				5DADA4802C9C478C00536303 /* DateFormatter.swift in Sources */,
+				5DADA4732C9C37F100536303 /* ProCoButton.swift in Sources */,
+				5DADA46B2C9C362D00536303 /* PurpleGradient.swift in Sources */,
+				5DADA4572C9C31E000536303 /* DashboardView.swift in Sources */,
+				5DADA4552C9C31E000536303 /* ProCoApp.swift in Sources */,
+				5DADA46D2C9C36C800536303 /* ProgressBarViewStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5DADA4782C9C388300536303 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DADA4792C9C388300536303 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5DADA45D2C9C31E100536303 /* Debug */ = {
