@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import WidgetKit
 
 struct SavedView: View {
     @Environment(\.modelContext) private var modelContext
@@ -93,7 +94,7 @@ struct SavedView: View {
         }
     }
     
-    private func updateCurrent() {
+    private func updateCurrent() { // to do used in 3 different classes
         // to do update with modelcontext???
         goalData.last?.current =
         if input.isEmpty {

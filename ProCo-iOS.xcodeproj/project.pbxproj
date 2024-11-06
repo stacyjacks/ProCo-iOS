@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D52CD1D2CDBD37200E75F1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DADA4582C9C31E100536303 /* Assets.xcassets */; };
+		5DA056A32CDBB106001EE534 /* Saved.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4812C9C5F9100536303 /* Saved.swift */; };
+		5DA056A42CDBB10A001EE534 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA47D2C9C3BAD00536303 /* Input.swift */; };
+		5DA056A92CDBC62D001EE534 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA056A82CDBC62D001EE534 /* CircularProgressView.swift */; };
+		5DA056AA2CDBC62D001EE534 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA056A82CDBC62D001EE534 /* CircularProgressView.swift */; };
 		5DADA4552C9C31E000536303 /* ProCoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4542C9C31E000536303 /* ProCoApp.swift */; };
 		5DADA4572C9C31E000536303 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4562C9C31E000536303 /* DashboardView.swift */; };
 		5DADA4592C9C31E100536303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DADA4582C9C31E100536303 /* Assets.xcassets */; };
@@ -27,9 +32,46 @@
 		5DADA4802C9C478C00536303 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA47F2C9C478C00536303 /* DateFormatter.swift */; };
 		5DADA4822C9C5F9100536303 /* Saved.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4812C9C5F9100536303 /* Saved.swift */; };
 		5DADA4842C9C638100536303 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4832C9C638100536303 /* SavedView.swift */; };
+		5DADA48C2CDB6CFC00536303 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DADA48B2CDB6CFC00536303 /* WidgetKit.framework */; };
+		5DADA48E2CDB6CFC00536303 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DADA48D2CDB6CFC00536303 /* SwiftUI.framework */; };
+		5DADA4952CDB6CFD00536303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DADA4942CDB6CFD00536303 /* Assets.xcassets */; };
+		5DADA4992CDB6CFD00536303 /* ProCoWidget-ExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5DADA4892CDB6CFC00536303 /* ProCoWidget-ExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5DADA49F2CDB730200536303 /* ProCoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA49E2CDB730200536303 /* ProCoEntry.swift */; };
+		5DADA4A02CDB730200536303 /* ProCoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA49E2CDB730200536303 /* ProCoEntry.swift */; };
+		5DADA4A22CDB750600536303 /* ProCoWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4A12CDB750600536303 /* ProCoWidgetView.swift */; };
+		5DADA4A32CDB750600536303 /* ProCoWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4A12CDB750600536303 /* ProCoWidgetView.swift */; };
+		5DADA4A52CDB756A00536303 /* ProCoEntryTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4A42CDB756A00536303 /* ProCoEntryTimelineProvider.swift */; };
+		5DADA4A62CDB756A00536303 /* ProCoEntryTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4A42CDB756A00536303 /* ProCoEntryTimelineProvider.swift */; };
+		5DADA4AC2CDB837600536303 /* GoalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4632C9C324100536303 /* GoalData.swift */; };
+		5DADA4AF2CDB87E100536303 /* ProCoWidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4AD2CDB87E100536303 /* ProCoWidgetExtension.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5DADA4972CDB6CFD00536303 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DADA4492C9C31E000536303 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DADA4882CDB6CFC00536303;
+			remoteInfo = "ProCoWidget-ExtensionExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5DADA49D2CDB6CFD00536303 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5DADA4992CDB6CFD00536303 /* ProCoWidget-ExtensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5DA056A82CDBC62D001EE534 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		5DADA4512C9C31E000536303 /* ProCo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ProCo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DADA4542C9C31E000536303 /* ProCoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCoApp.swift; sourceTree = "<group>"; };
 		5DADA4562C9C31E000536303 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
@@ -51,6 +93,17 @@
 		5DADA47F2C9C478C00536303 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		5DADA4812C9C5F9100536303 /* Saved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saved.swift; sourceTree = "<group>"; };
 		5DADA4832C9C638100536303 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
+		5DADA4892CDB6CFC00536303 /* ProCoWidget-ExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ProCoWidget-ExtensionExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DADA48B2CDB6CFC00536303 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		5DADA48D2CDB6CFC00536303 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		5DADA4942CDB6CFD00536303 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5DADA4962CDB6CFD00536303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DADA49E2CDB730200536303 /* ProCoEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCoEntry.swift; sourceTree = "<group>"; };
+		5DADA4A12CDB750600536303 /* ProCoWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCoWidgetView.swift; sourceTree = "<group>"; };
+		5DADA4A42CDB756A00536303 /* ProCoEntryTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCoEntryTimelineProvider.swift; sourceTree = "<group>"; };
+		5DADA4A72CDB7E7500536303 /* ProCo-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ProCo-iOS.entitlements"; sourceTree = "<group>"; };
+		5DADA4A82CDB7F2700536303 /* ProCoWidget-ExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ProCoWidget-ExtensionExtension.entitlements"; sourceTree = "<group>"; };
+		5DADA4AD2CDB87E100536303 /* ProCoWidgetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCoWidgetExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +114,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5DADA4862CDB6CFC00536303 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DADA48E2CDB6CFC00536303 /* SwiftUI.framework in Frameworks */,
+				5DADA48C2CDB6CFC00536303 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		5DADA4482C9C31E000536303 = {
 			isa = PBXGroup;
 			children = (
+				5DADA4A82CDB7F2700536303 /* ProCoWidget-ExtensionExtension.entitlements */,
+				5DADA4A72CDB7E7500536303 /* ProCo-iOS.entitlements */,
 				5DADA4532C9C31E000536303 /* ProCo-iOS */,
+				5DADA48F2CDB6CFC00536303 /* ProCoWidget-Extension */,
+				5DADA48A2CDB6CFC00536303 /* Frameworks */,
 				5DADA4522C9C31E000536303 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				5DADA4512C9C31E000536303 /* ProCo-iOS.app */,
+				5DADA4892CDB6CFC00536303 /* ProCoWidget-ExtensionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,8 +194,31 @@
 				5DADA4722C9C37F000536303 /* ProCoButton.swift */,
 				5DADA4742C9C380B00536303 /* ProCoTextButton.swift */,
 				5DADA4762C9C382500536303 /* ProCoNavButton.swift */,
+				5DA056A82CDBC62D001EE534 /* CircularProgressView.swift */,
 			);
 			path = components;
+			sourceTree = "<group>";
+		};
+		5DADA48A2CDB6CFC00536303 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DADA48B2CDB6CFC00536303 /* WidgetKit.framework */,
+				5DADA48D2CDB6CFC00536303 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5DADA48F2CDB6CFC00536303 /* ProCoWidget-Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5DADA4942CDB6CFD00536303 /* Assets.xcassets */,
+				5DADA4962CDB6CFD00536303 /* Info.plist */,
+				5DADA49E2CDB730200536303 /* ProCoEntry.swift */,
+				5DADA4A12CDB750600536303 /* ProCoWidgetView.swift */,
+				5DADA4A42CDB756A00536303 /* ProCoEntryTimelineProvider.swift */,
+				5DADA4AD2CDB87E100536303 /* ProCoWidgetExtension.swift */,
+			);
+			path = "ProCoWidget-Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,15 +231,34 @@
 				5DADA44D2C9C31E000536303 /* Sources */,
 				5DADA44E2C9C31E000536303 /* Frameworks */,
 				5DADA44F2C9C31E000536303 /* Resources */,
+				5DADA49D2CDB6CFD00536303 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5DADA4982CDB6CFD00536303 /* PBXTargetDependency */,
 			);
 			name = "ProCo-iOS";
 			productName = "ProCo-iOS";
 			productReference = 5DADA4512C9C31E000536303 /* ProCo-iOS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		5DADA4882CDB6CFC00536303 /* ProCoWidget-ExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DADA49A2CDB6CFD00536303 /* Build configuration list for PBXNativeTarget "ProCoWidget-ExtensionExtension" */;
+			buildPhases = (
+				5DADA4852CDB6CFC00536303 /* Sources */,
+				5DADA4862CDB6CFC00536303 /* Frameworks */,
+				5DADA4872CDB6CFC00536303 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ProCoWidget-ExtensionExtension";
+			productName = "ProCoWidget-ExtensionExtension";
+			productReference = 5DADA4892CDB6CFC00536303 /* ProCoWidget-ExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -163,6 +272,10 @@
 				TargetAttributes = {
 					5DADA4502C9C31E000536303 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					5DADA4882CDB6CFC00536303 = {
+						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -180,6 +293,7 @@
 			projectRoot = "";
 			targets = (
 				5DADA4502C9C31E000536303 /* ProCo-iOS */,
+				5DADA4882CDB6CFC00536303 /* ProCoWidget-ExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -195,6 +309,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5DADA4872CDB6CFC00536303 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D52CD1D2CDBD37200E75F1A /* Assets.xcassets in Resources */,
+				5DADA4952CDB6CFD00536303 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -202,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DADA4A52CDB756A00536303 /* ProCoEntryTimelineProvider.swift in Sources */,
 				5DADA47E2C9C3BAD00536303 /* Input.swift in Sources */,
 				5DADA47C2C9C38CC00536303 /* ScreenType.swift in Sources */,
 				5DADA4662C9C35A000536303 /* AddDataView.swift in Sources */,
@@ -211,6 +335,8 @@
 				5DADA4752C9C380B00536303 /* ProCoTextButton.swift in Sources */,
 				5DADA4682C9C35DE00536303 /* ScaffoldView.swift in Sources */,
 				5DADA46F2C9C36F700536303 /* Extensions.swift in Sources */,
+				5DA056A92CDBC62D001EE534 /* CircularProgressView.swift in Sources */,
+				5DADA4A22CDB750600536303 /* ProCoWidgetView.swift in Sources */,
 				5DADA4822C9C5F9100536303 /* Saved.swift in Sources */,
 				5DADA4842C9C638100536303 /* SavedView.swift in Sources */,
 				5DADA4802C9C478C00536303 /* DateFormatter.swift in Sources */,
@@ -218,11 +344,35 @@
 				5DADA46B2C9C362D00536303 /* PurpleGradient.swift in Sources */,
 				5DADA4572C9C31E000536303 /* DashboardView.swift in Sources */,
 				5DADA4552C9C31E000536303 /* ProCoApp.swift in Sources */,
+				5DADA49F2CDB730200536303 /* ProCoEntry.swift in Sources */,
 				5DADA46D2C9C36C800536303 /* ProgressBarViewStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5DADA4852CDB6CFC00536303 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DA056A42CDBB10A001EE534 /* Input.swift in Sources */,
+				5DADA4AF2CDB87E100536303 /* ProCoWidgetExtension.swift in Sources */,
+				5DA056AA2CDBC62D001EE534 /* CircularProgressView.swift in Sources */,
+				5DADA4A32CDB750600536303 /* ProCoWidgetView.swift in Sources */,
+				5DADA4A62CDB756A00536303 /* ProCoEntryTimelineProvider.swift in Sources */,
+				5DA056A32CDBB106001EE534 /* Saved.swift in Sources */,
+				5DADA4AC2CDB837600536303 /* GoalData.swift in Sources */,
+				5DADA4A02CDB730200536303 /* ProCoEntry.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5DADA4982CDB6CFD00536303 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DADA4882CDB6CFC00536303 /* ProCoWidget-ExtensionExtension */;
+			targetProxy = 5DADA4972CDB6CFD00536303 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5DADA4782C9C388300536303 /* Localizable.strings */ = {
@@ -358,8 +508,10 @@
 		5DADA4602C9C31E100536303 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ProCo-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ProCo-iOS/Preview Content\"";
@@ -387,8 +539,10 @@
 		5DADA4612C9C31E100536303 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ProCo-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ProCo-iOS/Preview Content\"";
@@ -413,6 +567,65 @@
 			};
 			name = Release;
 		};
+		5DADA49B2CDB6CFD00536303 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "ProCoWidget-ExtensionExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6RVN2GWH4R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ProCoWidget-Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ProCoWidget-Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kurmakaeva.anastasia.ProCo-iOS.ProCoWidget-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5DADA49C2CDB6CFD00536303 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "ProCoWidget-ExtensionExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6RVN2GWH4R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ProCoWidget-Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ProCoWidget-Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kurmakaeva.anastasia.ProCo-iOS.ProCoWidget-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -430,6 +643,15 @@
 			buildConfigurations = (
 				5DADA4602C9C31E100536303 /* Debug */,
 				5DADA4612C9C31E100536303 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DADA49A2CDB6CFD00536303 /* Build configuration list for PBXNativeTarget "ProCoWidget-ExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DADA49B2CDB6CFD00536303 /* Debug */,
+				5DADA49C2CDB6CFD00536303 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

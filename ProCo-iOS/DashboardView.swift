@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import WidgetKit
 
 struct DashboardView: View {
     @Environment(\.modelContext) private var modelContext
@@ -112,6 +113,8 @@ struct DashboardView: View {
         } else {
             self.input.map { $0.input }.reduce(0, +)
         }
+        
+        WidgetCenter.shared.reloadAllTimelines()
     }
 }
 

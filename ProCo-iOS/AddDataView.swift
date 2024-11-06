@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import WidgetKit
 
 struct AddDataView: View {
     let screenType: ScreenType
@@ -81,6 +82,7 @@ struct AddDataView: View {
                     case .AddInput:
                         addInput(amount: value)
                         updateCurrent()
+                        WidgetCenter.shared.reloadAllTimelines()
                         dismiss()
                     }
                 },
@@ -140,7 +142,7 @@ struct AddDataView: View {
         }
     }
     
-    private func updateCurrent() {
+    private func updateCurrent() { // to do used in 3 different classes
         // to do update with modelcontext???
         goalData.last?.current =
         if input.isEmpty {
