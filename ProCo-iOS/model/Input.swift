@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class Input {
+class Input: Identifiable {
     var id: Int
     var input: Float
     var time: String

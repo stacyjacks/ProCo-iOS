@@ -10,8 +10,11 @@ import SwiftData
 
 struct DashboardView: View {
     @Environment(\.modelContext) private var modelContext
+    
     @Query var goalData: [GoalData]
     @Query var input: [Input]
+    
+    @State private var selectedEntry: Input?
     
     var body: some View {
         NavigationStack {
@@ -36,8 +39,23 @@ struct DashboardView: View {
             .foregroundColor(.black)
             
             HStack {
-                ForEach(input, id: \.self) { entry in
-                    Text(String(entry.input))
+                ForEach(input, id: \.id) { entry in
+                    Button {
+                        selectedEntry = entry
+                    } label: {
+                        Text(String(entry.input))
+                    }
+                    .alert(
+                        "You're about to delete entry: \(String(selectedEntry?.input ?? 0.0))",
+                        isPresented: Binding(value: $selectedEntry), 
+                        presenting: selectedEntry
+                    ) { selectedEntry in
+                        Button("Cancel", role: .cancel) { }
+                        Button("Delete", role: .destructive) {
+                            deleteSingleEntry(selectedEntry)
+                        }
+                    }
+                    .foregroundColor(.black)
                 }
             }
             .padding(.S)
@@ -78,6 +96,21 @@ struct DashboardView: View {
             goalData.last?.current = 0.0 // to do update with modelcontext???
         } catch {
             fatalError()
+        }
+    }
+    
+    private func deleteSingleEntry(_ entry: Input) {
+        modelContext.delete(entry)
+        updateCurrent()
+    }
+    
+    private func updateCurrent() { // to do reuse???? it's the same in 3 classes
+        // to do update with modelcontext???
+        goalData.last?.current =
+        if input.isEmpty {
+            0.0
+        } else {
+            self.input.map { $0.input }.reduce(0, +)
         }
     }
 }

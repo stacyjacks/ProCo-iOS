@@ -24,3 +24,16 @@ extension CGFloat {
     /// 40 pt of spacing
     static var XL = 40.0
 }
+
+extension Binding where Value == Bool {
+    init<T>(value: Binding<T?>) {
+        self.init {
+            value.wrappedValue != nil
+        }
+        set: { newValue in
+            if !newValue {
+                value.wrappedValue = nil
+            }
+        }
+    }
+}

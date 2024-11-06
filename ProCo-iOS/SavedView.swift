@@ -10,7 +10,10 @@ import SwiftData
 
 struct SavedView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query var saved: [Saved]
+    
+    @Query(sort: [SortDescriptor(\Saved.grams, order: .forward)])
+    var saved: [Saved]
+    
     @Query var input: [Input]
     @Query var goalData: [GoalData]
     
@@ -48,8 +51,7 @@ struct SavedView: View {
             .listStyle(.plain)
             .frame(
                 maxWidth: .infinity,
-                maxHeight: .infinity,
-                alignment: .leading
+                maxHeight: .infinity
             )
             
             NavigationLink {

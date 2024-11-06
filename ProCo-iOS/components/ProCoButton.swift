@@ -21,16 +21,20 @@ struct ProCoButton: View {
                     Text(LocalizedStringKey(string!))
                         .padding(.XS)
                         .bold()
+                        .frame(maxWidth: width)
+                        .foregroundColor(.white)
+                        .background(Color.darkPurple)
+                        .cornerRadius(.S)
                 } else {
                     Image(systemName: icon!)
                         .padding(.XS)
+                        .frame(maxWidth: width)
+                        .foregroundColor(.white)
+                        .background(Color.darkPurple)
+                        .cornerRadius(.S)
                 }
             }
         )
-        .frame(maxWidth: width)
-        .foregroundColor(.white)
-        .background(Color.darkPurple)
-        .cornerRadius(.S)
     }
 }
 
