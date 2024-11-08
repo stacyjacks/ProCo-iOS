@@ -14,8 +14,10 @@ struct ProCoWidgetView: View {
     var body: some View {
         VStack {
             CircularProgressView(
+                color: Color("darkPurple"),
                 current: entry.goalData.last?.current ?? 0.0,
-                goal: entry.goalData.last?.goal ?? 0.0
+                goal: entry.goalData.last?.goal ?? 0.0,
+                bottomText: "grams"
             )
             .padding(.vertical)
         }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D52CD1D2CDBD37200E75F1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DADA4582C9C31E100536303 /* Assets.xcassets */; };
+		5D52CD1E2CDE200E00E75F1A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA46E2C9C36F700536303 /* Extensions.swift */; };
 		5DA056A32CDBB106001EE534 /* Saved.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4812C9C5F9100536303 /* Saved.swift */; };
 		5DA056A42CDBB10A001EE534 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA47D2C9C3BAD00536303 /* Input.swift */; };
 		5DA056A92CDBC62D001EE534 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA056A82CDBC62D001EE534 /* CircularProgressView.swift */; };
@@ -154,15 +155,15 @@
 				5DADA4622C9C322900536303 /* model */,
 				5DADA4542C9C31E000536303 /* ProCoApp.swift */,
 				5DADA4562C9C31E000536303 /* DashboardView.swift */,
-				5DADA4782C9C388300536303 /* Localizable.strings */,
-				5DADA4582C9C31E100536303 /* Assets.xcassets */,
-				5DADA45A2C9C31E100536303 /* Preview Content */,
 				5DADA4652C9C35A000536303 /* AddDataView.swift */,
 				5DADA46E2C9C36F700536303 /* Extensions.swift */,
 				5DADA4702C9C371C00536303 /* ProgressBarView.swift */,
 				5DADA47B2C9C38CC00536303 /* ScreenType.swift */,
 				5DADA47F2C9C478C00536303 /* DateFormatter.swift */,
 				5DADA4832C9C638100536303 /* SavedView.swift */,
+				5DADA45A2C9C31E100536303 /* Preview Content */,
+				5DADA4582C9C31E100536303 /* Assets.xcassets */,
+				5DADA4782C9C388300536303 /* Localizable.strings */,
 			);
 			path = "ProCo-iOS";
 			sourceTree = "<group>";
@@ -354,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DA056A42CDBB10A001EE534 /* Input.swift in Sources */,
+				5D52CD1E2CDE200E00E75F1A /* Extensions.swift in Sources */,
 				5DADA4AF2CDB87E100536303 /* ProCoWidgetExtension.swift in Sources */,
 				5DA056AA2CDBC62D001EE534 /* CircularProgressView.swift in Sources */,
 				5DADA4A32CDB750600536303 /* ProCoWidgetView.swift in Sources */,

@@ -8,48 +8,59 @@
 import SwiftUI
 
 struct CircularProgressView: View {
+    let color: Color
     let current: Float
     let goal: Float
+    let bottomText: String
     
     var body: some View {
         ZStack {
-            ActivityProgressView(
-                color: Color.black,
+            CompletedProgressView(
+                color: color,
                 current: Int(current),
                 goal: Int(goal),
-                progress: CGFloat(current / goal)
+                progress: CGFloat(current / goal),
+                bottomText: bottomText
             )
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
 }
 
-struct ActivityProgressView: View {
+struct CompletedProgressView: View {
     let color: Color
     let current: Int
     let goal: Int
     let progress: CGFloat
+    let bottomText: String
     
     var body: some View {
         ZStack {
             Circle()
                 .stroke(lineWidth: 20)
-                .opacity(0.1)
-                .foregroundStyle(Color("darkPurple"))
+                .opacity(0.4)
+                .foregroundStyle(color)
             
             Circle()
                 .trim(from: 0.0, to: progress)
                 .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round))
-                .foregroundStyle(Color("darkPurple"))
+                .foregroundStyle(color)
                 .rotationEffect(Angle(degrees: 275.0))
-            
-            Text(
-                "\(String(current)) of \(String(goal))"
-            )
+            VStack {
+                Text("\(String(current)) / \(String(goal))")
+                    .font(.system(size: 14))
+                    .fontWeight(.bold)
+                Text(bottomText)
+                    .font(.system(size: 12))
+            }
         }
     }
 }
 
 #Preview {
-    CircularProgressView(current: 80, goal: 100)
+    CircularProgressView(
+        color: Color("darkPurple"),
+        current: 80,
+        goal: 100, bottomText: "grams"
+    )
 }
