@@ -7,7 +7,6 @@
 
 import SwiftUI
 import SwiftData
-import WidgetKit
 
 struct DashboardView: View {
     @Environment(\.modelContext) private var modelContext
@@ -47,12 +46,12 @@ struct DashboardView: View {
                         Text(String(entry.input))
                     }
                     .alert(
-                        "You're about to delete entry: \(String(selectedEntry?.input ?? 0.0))",
+                        "deleteWarning \(String(selectedEntry?.input ?? 0.0))",
                         isPresented: Binding(value: $selectedEntry), 
                         presenting: selectedEntry
                     ) { selectedEntry in
-                        Button("Cancel", role: .cancel) { }
-                        Button("Delete", role: .destructive) {
+                        Button("cancel", role: .cancel) { }
+                        Button("delete", role: .destructive) {
                             deleteSingleEntry(selectedEntry)
                         }
                     }
@@ -94,7 +93,7 @@ struct DashboardView: View {
     func resetCurrentData() {
         do {
             try modelContext.delete(model: Input.self)
-            goalData.last?.current = 0.0 // to do update with modelcontext???
+            goalData.last?.updateCurrent(input)
         } catch {
             fatalError()
         }
@@ -102,19 +101,8 @@ struct DashboardView: View {
     
     private func deleteSingleEntry(_ entry: Input) {
         modelContext.delete(entry)
-        updateCurrent()
-    }
-    
-    private func updateCurrent() { // to do reuse???? it's the same in 3 classes
-        // to do update with modelcontext???
-        goalData.last?.current =
-        if input.isEmpty {
-            0.0
-        } else {
-            self.input.map { $0.input }.reduce(0, +)
-        }
-        
-        WidgetCenter.shared.reloadAllTimelines()
+        try? modelContext.save()
+        goalData.last?.updateCurrent(input)
     }
 }
 

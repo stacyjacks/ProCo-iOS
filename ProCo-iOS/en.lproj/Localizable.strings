@@ -18,3 +18,4 @@
 "name" = "Name";
 "delete" = "Delete";
 "plus" = "+";
+"deleteWarning %@" = "You're about to delete entry: %@";

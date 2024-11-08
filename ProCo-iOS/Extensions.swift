@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import WidgetKit
 
 extension CGFloat {
     /// 8 pt of spacing
@@ -35,5 +36,21 @@ extension Binding where Value == Bool {
                 value.wrappedValue = nil
             }
         }
+    }
+}
+
+extension GoalData {
+    func updateCurrent(_ input: [Input]) {
+        self.current =
+        if input.isEmpty {
+            0.0
+        } else {
+            input.map { $0.input }.reduce(0, +)
+        }
+        
+        modelContext?.insert(self)
+        try? modelContext?.save()
+        
+        WidgetCenter.shared.reloadAllTimelines()
     }
 }

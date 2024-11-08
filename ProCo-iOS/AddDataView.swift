@@ -7,7 +7,6 @@
 
 import SwiftUI
 import SwiftData
-import WidgetKit
 
 struct AddDataView: View {
     let screenType: ScreenType
@@ -18,7 +17,7 @@ struct AddDataView: View {
     @Query var input: [Input]
     @Query var saved: [Saved]
     
-    @State private var value: Float = 0.0
+    @State private var value: Float? = nil
     @State private var name: String = ""
     
     var body: some View {
@@ -28,10 +27,17 @@ struct AddDataView: View {
     var addDataView: some View {
         VStack(alignment: .center) {
             TextField(
-                "",
                 value: $value,
-                format: .number
+                format: .number, 
+                label: {
+                    Text("0")
+                        .multilineTextAlignment(.center)
+                        .padding(.XL)
+                        .font(.system(size: 36, weight: .bold, design: .rounded))
+                        .foregroundColor(.white)
+                }
             )
+            .keyboardType(.decimalPad)
             .onChange(
                 of: $value
                     .wrappedValue, { _, newAmount in
@@ -74,15 +80,15 @@ struct AddDataView: View {
                 action: {
                     switch screenType {
                     case .AddGoal:
-                        addGoalData(goal: value)
+                        addGoalData(goal: value ?? 0.0)
+                        goalData.last?.updateCurrent(input)
                         dismiss()
                     case .AddSaved:
-                        addSaved(name: name, grams: value)
+                        addSaved(name: name, grams: value ?? 0.0)
                         dismiss()
                     case .AddInput:
-                        addInput(amount: value)
-                        updateCurrent()
-                        WidgetCenter.shared.reloadAllTimelines()
+                        addInput(amount: value ?? 0.0)
+                        goalData.last?.updateCurrent(input)
                         dismiss()
                     }
                 },
@@ -139,16 +145,6 @@ struct AddDataView: View {
             try modelContext.save()
         } catch {
             fatalError()
-        }
-    }
-    
-    private func updateCurrent() { // to do used in 3 different classes
-        // to do update with modelcontext???
-        goalData.last?.current =
-        if input.isEmpty {
-            0.0
-        } else {
-            self.input.map { $0.input }.reduce(0, +)
         }
     }
 }

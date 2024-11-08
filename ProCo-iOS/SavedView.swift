@@ -7,7 +7,6 @@
 
 import SwiftUI
 import SwiftData
-import WidgetKit
 
 struct SavedView: View {
     @Environment(\.modelContext) private var modelContext
@@ -37,7 +36,7 @@ struct SavedView: View {
                             .multilineTextAlignment(.trailing)
                             .onTapGesture {
                                 addSavedToInput(amount: item.grams)
-                                updateCurrent()
+                                goalData.last?.updateCurrent(input)
                             }
                     }
                     .padding(.XS)
@@ -91,16 +90,6 @@ struct SavedView: View {
             try modelContext.save()
         } catch {
             fatalError()
-        }
-    }
-    
-    private func updateCurrent() { // to do used in 3 different classes
-        // to do update with modelcontext???
-        goalData.last?.current =
-        if input.isEmpty {
-            0.0
-        } else {
-            self.input.map { $0.input }.reduce(0, +)
         }
     }
 }
