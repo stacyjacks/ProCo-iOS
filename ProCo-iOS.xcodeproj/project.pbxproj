@@ -130,8 +130,8 @@
 		5DADA4482C9C31E000536303 = {
 			isa = PBXGroup;
 			children = (
-				5DADA4A82CDB7F2700536303 /* ProCoWidget-ExtensionExtension.entitlements */,
 				5DADA4A72CDB7E7500536303 /* ProCo-iOS.entitlements */,
+				5DADA4A82CDB7F2700536303 /* ProCoWidget-ExtensionExtension.entitlements */,
 				5DADA4532C9C31E000536303 /* ProCo-iOS */,
 				5DADA48F2CDB6CFC00536303 /* ProCoWidget-Extension */,
 				5DADA48A2CDB6CFC00536303 /* Frameworks */,

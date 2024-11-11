@@ -36,14 +36,17 @@ struct DashboardView: View {
                 )
             }
             .frame(alignment: .top)
+            .shadow(radius: 20)
             .foregroundColor(.black)
-            
-            HStack {
+
+            VStack {
                 ForEach(input, id: \.id) { entry in
                     Button {
                         selectedEntry = entry
                     } label: {
-                        Text(String(entry.input))
+                        Text("\(String(entry.input)) gr")
+                            .padding(.S)
+                            .fontWeight(.bold)
                     }
                     .alert(
                         "deleteWarning \(String(selectedEntry?.input ?? 0.0))",
@@ -55,39 +58,59 @@ struct DashboardView: View {
                             deleteSingleEntry(selectedEntry)
                         }
                     }
-                    .foregroundColor(.black)
-                }
-            }
-            .padding(.S)
-            
-            HStack {
-                NavigationLink {
-                    SavedView()
-                } label: {
-                    ProCoNavButton(icon: "list.bullet.circle.fill")
-                }
-                .frame(maxHeight: .infinity, alignment: .bottom)
-                
-                NavigationLink {
-                    AddDataView(
-                        screenType: ScreenType.AddInput
+                    .foregroundColor(Color("darkPurple"))
+                    .background(
+                        RoundedRectangle(cornerRadius: 20.0).fill(.white).shadow(radius: 10)
                     )
-                } label: {
-                    ProCoNavButton(string: "plus")
                 }
-                .frame(maxHeight: .infinity, alignment: .bottom)
                 
-                ProCoButton(
-                    action: {
-                        resetCurrentData()
-                    },
-                    icon: "trash.fill"
-                )
-                .frame(maxHeight: .infinity, alignment: .bottom)
             }
+            .padding(.vertical)
+            .frame(
+                maxWidth: .infinity,
+                maxHeight: .infinity,
+                alignment: .topLeading
+            )
         }
         .frame(maxHeight: .infinity, alignment: .topLeading)
         .padding(.M)
+        .toolbar {
+            ToolbarItemGroup(placement: .bottomBar) {
+                HStack {
+                    NavigationLink {
+                        SavedView()
+                    } label: {
+                        ProCoNavButton(icon: "list.star")
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: 40)
+                    .background(.darkPurple)
+                    .clipShape(RoundedRectangle(cornerRadius: 15.0))
+                    
+                    NavigationLink {
+                        AddDataView(
+                            screenType: ScreenType.AddInput
+                        )
+                    } label: {
+                        ProCoNavButton(icon: "plus")
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: 40)
+                    .background(.darkPurple)
+                    .clipShape(RoundedRectangle(cornerRadius: 15.0))
+                    
+                    ProCoButton(
+                        action: {
+                            resetCurrentData()
+                        },
+                        icon: "trash.fill"
+                    )
+                    .frame(maxWidth: .infinity, maxHeight: 40)
+                    .background(.darkPurple)
+                    .clipShape(RoundedRectangle(cornerRadius: 15.0))
+                }
+                .shadow(radius: 10)
+                .padding(.XS)
+            }
+        }
     }
     
     func resetCurrentData() {
@@ -107,5 +130,15 @@ struct DashboardView: View {
 }
 
 #Preview {
-    DashboardView()
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(
+        for: GoalData.self, Input.self, configurations: config
+    )
+    
+    let input = Input(id: 0, input: 20.0, time: "")
+    let goalData = GoalData(goal: 90, current: input.input)
+    container.mainContext.insert(input)
+    container.mainContext.insert(goalData)
+    
+    return DashboardView().modelContainer(container)
 }
