@@ -34,7 +34,7 @@ struct AddDataView: View {
                         .multilineTextAlignment(.center)
                         .padding(.XL)
                         .font(.system(size: 36, weight: .bold, design: .rounded))
-                        .foregroundColor(.white)
+                        .foregroundStyle(.darkPurple.opacity(0.6))
                 }
             )
             .keyboardType(.decimalPad)
@@ -47,7 +47,7 @@ struct AddDataView: View {
             .multilineTextAlignment(.center)
             .padding(.XL)
             .font(.system(size: 36, weight: .bold, design: .rounded))
-            .foregroundColor(.white)
+            .foregroundColor(.darkPurple)
             
             Text(
                 "grams"
@@ -94,6 +94,7 @@ struct AddDataView: View {
                 },
                 string: "save"
             )
+            .shadow(radius: 10)
             .padding(.XS)
             
             ProCoTextButton(
@@ -101,7 +102,7 @@ struct AddDataView: View {
                 string: "cancel"
             )
         }
-        .padding()
+        .padding(.top, .XXL)
         .frame(maxWidth: .infinity)
     }
     
@@ -150,5 +151,7 @@ struct AddDataView: View {
 }
 
 #Preview {
-    AddDataView(screenType: ScreenType.AddSaved)
+    NavigationStack {
+        AddDataView(screenType: ScreenType.AddSaved)
+    }
 }

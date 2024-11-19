@@ -24,6 +24,9 @@ extension CGFloat {
     
     /// 40 pt of spacing
     static var XL = 40.0
+    
+    /// 80 pt of spacing
+    static var XXL = 80.0
 }
 
 extension Binding where Value == Bool {

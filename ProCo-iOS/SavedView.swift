@@ -53,19 +53,18 @@ struct SavedView: View {
                 maxWidth: .infinity,
                 maxHeight: .infinity
             )
-            
-            NavigationLink {
-                AddDataView(
-                    screenType: ScreenType.AddSaved
-                )
-            } label: {
-                ProCoNavButton(string: "plus")
+            .padding(.top, .XL)
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                NavigationLink {
+                    AddDataView(
+                        screenType: ScreenType.AddSaved
+                    )
+                } label: {
+                    Image(systemName: "plus.circle.fill")                        .bold()
+                }
             }
-            .frame(
-                maxWidth: .infinity,
-                alignment: .bottom
-            )
-            .padding(.M)
         }
     }
     
@@ -95,5 +94,7 @@ struct SavedView: View {
 }
 
 #Preview {
-    SavedView()
+    NavigationStack {
+        SavedView()
+    }
 }

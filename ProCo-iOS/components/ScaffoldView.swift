@@ -13,17 +13,23 @@ struct ScaffoldView<Content: View>: View {
     
     var body: some View {
         VStack {
-            Text(title)
-                .foregroundColor(.white)
-                .padding()
-                .font(.headline)
             view
         }
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text(title)
+                    .foregroundColor(.darkPurple)
+                    .font(.headline)
+            }
+        }
+        .navigationBarTitleDisplayMode(.inline)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(purpleGradient)
     }
 }
 
 #Preview {
-    ScaffoldView(title: "Today's goal", view: EmptyView())
+    NavigationStack {
+        ScaffoldView(title: "Today's goal", view: EmptyView())
+    }
 }

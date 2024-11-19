@@ -8,7 +8,7 @@
 import SwiftUI
 
 let purpleGradient = LinearGradient(
-    gradient: Gradient(colors: [.darkPurple, .white]),
+    gradient: Gradient(colors: [.white, .darkPurple]),
     startPoint: .top,
     endPoint: .bottom
 )

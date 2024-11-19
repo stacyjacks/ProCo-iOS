@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CircularProgressView: View {
     let color: Color
+    var lineWidth: CGFloat = 30
     let current: Float
     let goal: Float
     let bottomText: String
@@ -17,6 +18,7 @@ struct CircularProgressView: View {
         ZStack {
             CompletedProgressView(
                 color: color,
+                lineWidth: lineWidth,
                 current: Int(current),
                 goal: Int(goal),
                 progress: CGFloat(current / goal),
@@ -29,6 +31,7 @@ struct CircularProgressView: View {
 
 struct CompletedProgressView: View {
     let color: Color
+    let lineWidth: CGFloat
     let current: Int
     let goal: Int
     let progress: CGFloat
@@ -37,13 +40,13 @@ struct CompletedProgressView: View {
     var body: some View {
         ZStack {
             Circle()
-                .stroke(lineWidth: 20)
+                .stroke(lineWidth: lineWidth)
                 .opacity(0.4)
                 .foregroundStyle(color)
             
             Circle()
                 .trim(from: 0.0, to: progress)
-                .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round))
+                .stroke(style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
                 .foregroundStyle(color)
                 .rotationEffect(Angle(degrees: 275.0))
             VStack {
@@ -60,6 +63,7 @@ struct CompletedProgressView: View {
 #Preview {
     CircularProgressView(
         color: Color("darkPurple"),
+        lineWidth: 30,
         current: 80,
         goal: 100, bottomText: "grams"
     )

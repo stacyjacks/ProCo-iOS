@@ -12,14 +12,18 @@ struct DashboardView: View {
     @Environment(\.modelContext) private var modelContext
     
     @Query var goalData: [GoalData]
-    @Query var input: [Input]
+    @Query(sort: [SortDescriptor(\Input.input, order: .forward)])
+    var input: [Input]
     
     @State private var selectedEntry: Input?
+    
+    let radius: CGFloat = 130
     
     var body: some View {
         NavigationStack {
             ScaffoldView(title: "Today's goal", view: dashView)
         }
+        .tint(.darkPurple)
     }
     
     var dashView: some View {
@@ -29,28 +33,30 @@ struct DashboardView: View {
                     screenType: ScreenType.AddGoal
                 )
             } label: {
-                ProgressBarView(
-                    goal: goalData.last?.goal ?? 0.0,
+                CircularProgressView(
+                    color: .darkPurple,
                     current: goalData.last?.current ?? 0.0,
-                    goalText: ""
+                    goal: goalData.last?.goal ?? 0.0,
+                    bottomText: "grams"
                 )
+                .padding(.bottom, .L)
             }
-            .frame(alignment: .top)
-            .shadow(radius: 20)
+            .frame(maxWidth: .infinity, maxHeight: 300.0, alignment: .top)
             .foregroundColor(.black)
-
-            VStack {
-                ForEach(input, id: \.id) { entry in
-                    Button {
-                        selectedEntry = entry
-                    } label: {
-                        Text("\(String(entry.input)) gr")
-                            .padding(.S)
-                            .fontWeight(.bold)
-                    }
+            
+            ZStack(alignment: .center) {
+                ForEach(
+                    Array(input.enumerated()), id: \.element.id
+                ) { index, entry in
+                    BubbleButton(
+                        action: {
+                            selectedEntry = entry
+                        },
+                        value: entry.input
+                    )
                     .alert(
                         "deleteWarning \(String(selectedEntry?.input ?? 0.0))",
-                        isPresented: Binding(value: $selectedEntry), 
+                        isPresented: Binding(value: $selectedEntry),
                         presenting: selectedEntry
                     ) { selectedEntry in
                         Button("cancel", role: .cancel) { }
@@ -58,19 +64,14 @@ struct DashboardView: View {
                             deleteSingleEntry(selectedEntry)
                         }
                     }
-                    .foregroundColor(Color("darkPurple"))
-                    .background(
-                        RoundedRectangle(cornerRadius: 20.0).fill(.white).shadow(radius: 10)
+                    .position(
+                        x: calculateX(count: input.count, index: index),
+                        y: calculateY(count: input.count, index: index)
                     )
                 }
-                
             }
-            .padding(.vertical)
-            .frame(
-                maxWidth: .infinity,
-                maxHeight: .infinity,
-                alignment: .topLeading
-            )
+            .offset(CGSize(width: 0.0, height: 70.0))
+            .frame(maxWidth: radius * 2)
         }
         .frame(maxHeight: .infinity, alignment: .topLeading)
         .padding(.M)
@@ -127,6 +128,16 @@ struct DashboardView: View {
         try? modelContext.save()
         goalData.last?.updateCurrent(input)
     }
+    
+    private func calculateX(count: Int, index: Int) -> CGFloat {
+        let angle = Angle.degrees(Double(index) / Double(count) * 360)
+        return radius * CGFloat(cos(angle.radians)) + radius
+    }
+    
+    private func calculateY(count: Int, index: Int) -> CGFloat {
+        let angle = Angle.degrees(Double(index) / Double(count) * 360)
+        return radius * CGFloat(sin(angle.radians)) + radius
+    }
 }
 
 #Preview {
@@ -136,8 +147,14 @@ struct DashboardView: View {
     )
     
     let input = Input(id: 0, input: 20.0, time: "")
+    let input2 = Input(id: 1, input: 15.0, time: "")
+    let input3 = Input(id: 2, input: 30.0, time: "")
+    let input4 = Input(id: 3, input: 45.0, time: "")
     let goalData = GoalData(goal: 90, current: input.input)
     container.mainContext.insert(input)
+    container.mainContext.insert(input2)
+    container.mainContext.insert(input3)
+    container.mainContext.insert(input4)
     container.mainContext.insert(goalData)
     
     return DashboardView().modelContainer(container)

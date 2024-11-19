@@ -45,6 +45,7 @@
 		5DADA4A62CDB756A00536303 /* ProCoEntryTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4A42CDB756A00536303 /* ProCoEntryTimelineProvider.swift */; };
 		5DADA4AC2CDB837600536303 /* GoalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4632C9C324100536303 /* GoalData.swift */; };
 		5DADA4AF2CDB87E100536303 /* ProCoWidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA4AD2CDB87E100536303 /* ProCoWidgetExtension.swift */; };
+		5DDFE4E22CE36978007AF9CA /* BubbleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDFE4E12CE36978007AF9CA /* BubbleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		5DADA4A72CDB7E7500536303 /* ProCo-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ProCo-iOS.entitlements"; sourceTree = "<group>"; };
 		5DADA4A82CDB7F2700536303 /* ProCoWidget-ExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ProCoWidget-ExtensionExtension.entitlements"; sourceTree = "<group>"; };
 		5DADA4AD2CDB87E100536303 /* ProCoWidgetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProCoWidgetExtension.swift; sourceTree = "<group>"; };
+		5DDFE4E12CE36978007AF9CA /* BubbleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				5DADA4742C9C380B00536303 /* ProCoTextButton.swift */,
 				5DADA4762C9C382500536303 /* ProCoNavButton.swift */,
 				5DA056A82CDBC62D001EE534 /* CircularProgressView.swift */,
+				5DDFE4E12CE36978007AF9CA /* BubbleButton.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				5DADA4802C9C478C00536303 /* DateFormatter.swift in Sources */,
 				5DADA4732C9C37F100536303 /* ProCoButton.swift in Sources */,
 				5DADA46B2C9C362D00536303 /* PurpleGradient.swift in Sources */,
+				5DDFE4E22CE36978007AF9CA /* BubbleButton.swift in Sources */,
 				5DADA4572C9C31E000536303 /* DashboardView.swift in Sources */,
 				5DADA4552C9C31E000536303 /* ProCoApp.swift in Sources */,
 				5DADA49F2CDB730200536303 /* ProCoEntry.swift in Sources */,
